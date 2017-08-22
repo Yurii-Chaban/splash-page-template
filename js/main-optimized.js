@@ -16,11 +16,15 @@ preloaderShow();
 $(document).ready(function () {
 
     preloaderHide();
+    var menuBtn = $("#menu-btn"),
+        lrg_logo = $(".lrg-logo"),
+        sml_logo = $(".sml-logo"),
+        width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
     // code for mobile and tablet
 
         // change logo on scroll
-        if (widh < 1023) {
+        if (width < 1023) {
             function resizeHeaderOnScroll() {
             const distanceY = window.pageYOffset || document.documentElement.scrollTop,
                 shrinkOn = 0,
